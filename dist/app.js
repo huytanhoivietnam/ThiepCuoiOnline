@@ -4,50 +4,72 @@ const cover = $('#cover');
 const invitation = $('#invitation');
 const nav = $('.bottom-nav');
 const musicButton = $('#music-button');
+const musicPlayer = $('#music-player');
 const weddingSong = $('#wedding-song');
 weddingSong.volume = 0.5;
-
-// Offset each flight so the two margins have petals at different heights.
-const shower = $('.petal-shower');
-for (let i = 0; i < 12; i++) {
-  const petal = document.createElement('span');
-  const right = i % 2 === 1;
-  const duration = 13 + (i * 3) % 8;
-  petal.className = i % 4 < 2 ? 'petal rose' : 'petal peach';
-  petal.style.setProperty('--lane', (1 + (i * 3) % 10) + '%');
-  petal.style.setProperty('--size', (12 + (i * 5) % 13) + 'px');
-  petal.style.setProperty('--drift', ((right ? -1 : 1) * (6 + i % 13)) + 'px');
-  petal.style.setProperty('--fall', duration + 's');
-  petal.style.setProperty('--turn', (4.3 + (i % 4) * 0.7) + 's');
-  petal.style.setProperty('--delay', (-duration * ((i * 5 + 1) % 12) / 12) + 's');
-  shower.append(petal);
-}
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', event => {
     const target = document.getElementById(link.getAttribute('href').slice(1));
     if (!target) return;
     event.preventDefault();
-    target.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start'});
+    target.scrollIntoView({behavior: 'smooth', block: 'start'});
     history.replaceState(null, '', link.getAttribute('href'));
   });
 });
+function startInvitationScroll(delay) {
+  const listeners = new AbortController();
+  const options = {capture: true, passive: true, signal: listeners.signal};
+  let frame = 0;
+  let timer = 0;
+
+  function stop() {
+    clearTimeout(timer);
+    cancelAnimationFrame(frame);
+    listeners.abort();
+  }
+
+  for (const event of ['wheel', 'pointerdown', 'touchstart', 'keydown', 'pagehide']) {
+    window.addEventListener(event, stop, options);
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stop();
+  }, options);
+
+  timer = setTimeout(() => {
+    let lastTime = performance.now();
+    let position = window.scrollY;
+    function advance(time) {
+      const bottom = document.documentElement.scrollHeight - window.innerHeight;
+      const elapsed = Math.min(64, time - lastTime);
+      position = Math.min(bottom, position + elapsed * 0.026);
+      window.scrollTo({top: position, behavior: 'instant'});
+      lastTime = time;
+      if (position >= bottom) stop();
+      else frame = requestAnimationFrame(advance);
+    }
+    frame = requestAnimationFrame(advance);
+  }, delay);
+}
+
 let opening = false;
 $('#open-invitation').addEventListener('click', () => {
   if (opening) return;
   opening = true;
+  window.scrollTo({top: 0, behavior: 'instant'});
+  startInvitationScroll(1800);
   $('#open-invitation').disabled = true;
   cover.classList.add('opening');
   invitation.inert = false;
   nav.hidden = false;
-  musicButton.hidden = false;
+  musicPlayer.hidden = false;
   playWeddingSong();
   setTimeout(() => {
     cover.classList.add('opened');
     cover.inert = true;
     document.body.classList.remove('closed');
     $('.scroll-hint').focus({preventScroll: true});
-  }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 650);
+  }, 650);
 });
 $('#reopen').addEventListener('click', () => {
   scrollTo({top: 0, behavior: 'instant'});
@@ -56,7 +78,7 @@ $('#reopen').addEventListener('click', () => {
   document.body.classList.add('closed');
   invitation.inert = true;
   nav.hidden = true;
-  musicButton.hidden = true;
+  musicPlayer.hidden = true;
   weddingSong.pause();
   opening = false;
   $('#open-invitation').disabled = false;
@@ -72,7 +94,16 @@ const eventDate = new Date('2026-11-29T10:00:00+07:00');
 function updateCountdown() {
   const seconds = Math.max(0, Math.floor((eventDate.getTime() - Date.now()) / 1000));
   const values = [Math.floor(seconds/86400), Math.floor(seconds/3600)%24, Math.floor(seconds/60)%60, seconds%60];
-  ['days','hours','minutes','seconds'].forEach((id,index) => $('#'+id).textContent = String(values[index]).padStart(2,'0'));
+  ['days','hours','minutes','seconds'].forEach((id,index) => {
+    const element = $('#'+id);
+    const value = String(values[index]).padStart(2,'0');
+    if (element.textContent === value) return;
+    element.textContent = value;
+    element.animate([
+        {opacity: .35, transform: 'translateY(-5px)'},
+        {opacity: 1, transform: 'translateY(0)'}
+    ], {duration: 350, easing: 'ease-out'});
+  });
 }
 updateCountdown(); setInterval(updateCountdown, 1000);
 const calendar = $('#calendar');
@@ -119,7 +150,8 @@ form.elements.name.addEventListener('input',()=>form.elements.name.setCustomVali
 
 document.querySelectorAll('[data-photo]').forEach(button => button.addEventListener('click',()=>{
   $('#full-photo').src = button.dataset.photo;
-  $('#full-photo').alt = button.querySelector('img').alt;
+  const image = button.querySelector('.album-slide.is-current img') || button.querySelector('img');
+  $('#full-photo').alt = image.alt;
   $('#photo-dialog').showModal();
 }));
 document.querySelectorAll('dialog').forEach(dialog => {
@@ -131,7 +163,8 @@ function updateMusicButton() {
   const playing = !weddingSong.paused && !weddingSong.error;
   musicButton.setAttribute('aria-pressed', String(playing));
   musicButton.setAttribute('aria-label', playing ? 'Tạm dừng nhạc nền' : 'Phát nhạc nền');
-  musicButton.textContent = playing ? 'Ⅱ' : '♫';
+  musicButton.classList.toggle('playing', playing);
+  musicPlayer.classList.toggle('is-playing', playing);
 }
 
 function playWeddingSong() {

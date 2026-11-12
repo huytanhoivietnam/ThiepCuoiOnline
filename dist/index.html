@@ -7,45 +7,52 @@
 <link rel="preload" href="assets/fonts/GreatVibes-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Viaoda+Libre&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+<link rel="stylesheet" href="styles.css?v=motion-20261113-v6"><link rel="stylesheet" href="motion.css?v=20261113-v8"><script src="app.js?v=motion-20261113-v6" defer></script><script src="wedding-effects.js?v=motion-20261113-v6" defer></script><script src="invitation-motion.js?v=20261113-v8" defer></script>
 </head>
 <body class="closed">
-<div class="petal-shower" aria-hidden="true"></div>
+<canvas id="wedding-effects" aria-hidden="true"></canvas>
 <div class="cover" id="cover"><article class="opening-card">
 <svg class="heart-thread thread-top" viewBox="0 0 230 160" aria-hidden="true"><path pathLength="1" d="M-20 117C62 161 75 104 49 55S-4 49 22 86C49 124 33 5 9 27S57 148 77 91S147 39 180 24S205-7 201-29"/></svg>
 <svg class="heart-thread thread-bottom" viewBox="0 0 230 160" aria-hidden="true"><path pathLength="1" d="M-20 117C62 161 75 104 49 55S-4 49 22 86C49 124 33 5 9 27S57 148 77 91S147 39 180 24S205-7 201-29"/></svg>
 <div class="heart-seal" aria-hidden="true">♥</div>
 <h1>Quang Huy<span class="amp">&</span>Ngọc Lan</h1><div class="ornament"><span></span>❦<span></span></div>
-<p class="cover-date">29 tháng 11, 2026</p><p class="invited">Kính mời</p><p class="guest" data-guest>Bạn & người thương</p>
-<p class="letter-note">đến dự buổi tiệc chung vui cùng gia đình</p><button class="button open-button" id="open-invitation">Mở thiệp</button>
+<p class="cover-date">29 tháng 11, 2026</p><p class="invited">Kính mời</p><p class="guest" data-guest>Quý khách</p>
+<p class="letter-note">đến dự buổi tiệc chung vui cùng gia đình</p><span class="open-button-wrap"><button class="button open-button" id="open-invitation">Mở thiệp</button></span>
 </article></div>
 <main id="invitation" inert><div class="paper">
 <section class="hero" id="home"><p class="save-heading">SAVE THE DATE</p>
-<div class="envelope-scene" aria-label="Phong bì đỏ, hoa và ảnh cưới minh họa"><img class="envelope-back" src="assets/envelope-back.webp" alt="" aria-hidden="true"><div class="envelope-photo"><img src="assets/celebration.jpg" alt="Ảnh cưới minh họa bên bó hoa trong nắng chiều" fetchpriority="high"></div><img class="envelope-flowers" src="assets/burgundy-flowers.webp" alt="" aria-hidden="true"><img class="envelope-front" src="assets/envelope-front.webp" alt="" aria-hidden="true"></div>
+<div class="envelope-scene" aria-label="Phong bì đỏ, hoa và ảnh cưới minh họa"><img class="envelope-back" src="assets/envelope-back.webp" alt="" aria-hidden="true"><div class="envelope-photo"><img src="assets/celebration.jpg?v=e636768b669e" alt="Ảnh cưới minh họa bên bó hoa trong nắng chiều" fetchpriority="high"></div><img class="envelope-flowers" src="assets/burgundy-flowers.webp" alt="" aria-hidden="true"><img class="envelope-front" src="assets/envelope-front.webp" alt="" aria-hidden="true"></div>
 <h2 class="hero-names">Quang Huy<span class="amp">&</span>Ngọc Lan</h2><p class="hero-date">29 . 11 . 2026</p><a href="#ceremony" class="scroll-hint" aria-label="Xem thông tin lễ cưới">⌄</a></section>
 <section class="ceremony-section wine-panel section" id="ceremony"><h2>THÔNG TIN LỄ CƯỚI</h2>
 <div class="families"><div><p class="family-label">NHÀ TRAI</p><p>Ông: <strong>Nguyễn Văn Quang</strong></p><p class="mother">Bà: <strong>Ngô Thị Tâm</strong></p></div><div><p class="family-label">NHÀ GÁI</p><p class="mother">Bà: <strong>Vũ Thị Duyên</strong></p></div></div>
 <p class="announcement">TRÂN TRỌNG BÁO TIN<br>LỄ THÀNH HÔN CỦA HAI CON CHÚNG TÔI</p><div class="full-names"><p>Nguyễn Đào Quang Huy</p><span>&</span><p>Nguyễn Thị Ngọc Lan</p></div><div class="thin-rule"></div>
 <p class="ceremony-label">HÔN LỄ ĐƯỢC TỔ CHỨC TẠI NHÀ TRAI</p><p class="ceremony-venue">Nhà Văn Hóa Cụm 1</p><p class="address">Thôn Vĩnh Kỳ, Tân Hội, xã Ô Diên, Hà Nội</p>
 <p class="event-time"><span>Giờ thành hôn</span><time datetime="2026-11-29T15:00:00+07:00">15:00</time></p><div class="event-date"><span>CHỦ NHẬT</span><strong>29</strong><span>THÁNG 11<br>NĂM 2026</span></div><p class="lunar-date">(Tức ngày 21 tháng 10 năm Bính Ngọ)</p></section>
-<div class="photo-interlude"><img src="assets/celebration.jpg" alt="Ảnh cưới minh họa, sẽ thay bằng ảnh của Quang Huy và Ngọc Lan" loading="lazy"><span>Ảnh minh họa</span></div>
+<div class="photo-interlude photo-slideshow" aria-label="Album ảnh cưới Quang Huy và Ngọc Lan">
+  <button class="interlude-photo" data-photo="assets/album-1.jpg" aria-label="Phóng to khoảnh khắc 1"><img src="assets/album-1.jpg" alt="Khoảnh khắc 1 của Quang Huy và Ngọc Lan" loading="lazy"></button>
+</div>
 <section class="reception-section wine-panel section" id="event"><h2>THÔNG TIN TIỆC CƯỚI</h2>
-<p class="invitation-copy">Trân trọng kính mời <span data-guest>Bạn & người thương</span><br>đến dự buổi tiệc chung vui cùng gia đình chúng tôi</p>
+<p class="invitation-copy">Trân trọng kính mời <span data-guest>Quý khách</span><br>đến dự buổi tiệc chung vui cùng gia đình chúng tôi</p>
 <p class="event-time"><span>Giờ dự tiệc</span><time datetime="2026-11-29T10:00:00+07:00">10:00</time></p><div class="event-date"><span>CHỦ NHẬT</span><strong>29</strong><span>THÁNG 11<br>NĂM 2026</span></div><p class="lunar-date">(Tức ngày 21 tháng 10 năm Bính Ngọ)</p>
 <div class="countdown" aria-label="Thời gian đến tiệc cưới lúc 10 giờ ngày 29 tháng 11"><div><strong id="days">00</strong><span>ngày</span></div><i>:</i><div><strong id="hours">00</strong><span>giờ</span></div><i>:</i><div><strong id="minutes">00</strong><span>phút</span></div><i>:</i><div><strong id="seconds">00</strong><span>giây</span></div></div>
 <div class="calendar"><div class="calendar-title">THÁNG 11 · 2026</div><div class="calendar-grid" id="calendar"></div></div><div class="thin-rule"></div>
 <p class="venue-label">TIỆC CƯỚI TỔ CHỨC TẠI</p><h3>Nhà Văn Hóa Cụm 1</h3><p class="address">Thôn Vĩnh Kỳ, Tân Hội, xã Ô Diên, Hà Nội</p><p class="honor">Sự hiện diện của quý khách<br>là niềm vinh hạnh cho gia đình chúng tôi!</p></section>
-<section class="map-section section" id="map"><img class="map-flower" src="assets/burgundy-flowers.webp" alt="" aria-hidden="true" loading="lazy"><p class="eyebrow">HẸN GẶP BẠN TẠI NGÀY VUI</p><h2>Bản đồ nhà trai</h2><p>Quét mã QR để mở vị trí trên Google Maps</p>
-<a class="qr-link" href="https://maps.app.goo.gl/LovpuDx6ZJKAN22P7" target="_blank" rel="noopener" aria-label="Mở bản đồ nhà trai trên Google Maps"><img src="assets/map-nha-trai-qr.png" alt="Mã QR bản đồ nhà trai – quét để mở Google Maps" width="240" height="240" loading="lazy"></a>
+<section class="map-section section" id="map"><img class="map-flower" src="assets/burgundy-flowers.webp" alt="" aria-hidden="true" loading="lazy"><p class="eyebrow">HẸN GẶP BẠN TẠI NGÀY VUI</p><h2>Bản đồ nhà trai</h2>
+
 <a class="button" href="https://maps.app.goo.gl/LovpuDx6ZJKAN22P7" target="_blank" rel="noopener">Mở bản đồ nhà trai <span aria-hidden="true">↗</span></a>
 <iframe class="map-embed" title="Vị trí nhà trai trên Google Maps" src="https://maps.google.com/maps?q=21.099740,105.697812&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></section>
 <section class="rsvp-section section" id="rsvp"><p class="script">Hẹn bạn ngày chung vui</p><h2>Xác nhận tham dự</h2><p>Sự hiện diện của bạn là niềm vui của chúng mình.</p>
 <form id="rsvp-form"><label for="guest-name">Họ và tên</label><input id="guest-name" name="name" autocomplete="name" placeholder="Nhập tên của bạn" required maxlength="100"><fieldset><legend>Bạn sẽ tham dự chứ?</legend><label class="radio-option"><input type="radio" name="attendance" value="yes" checked><span>Có, tôi sẽ tham dự</span></label><label class="radio-option"><input type="radio" name="attendance" value="no"><span>Tôi bận, rất tiếc không thể tham dự</span></label></fieldset><div id="count-field"><label for="guest-count">Số lượng người tham dự</label><select id="guest-count" name="count"><option value="1">01 người</option><option value="2">02 người</option><option value="3">03 người</option><option value="4">04 người</option><option value="5">05 người</option></select></div><label for="wish">Lời chúc</label><textarea id="wish" name="wish" rows="3" placeholder="Gửi lời chúc đến Quang Huy & Ngọc Lan…" maxlength="1000"></textarea><button type="submit" class="button">Gửi xác nhận</button><p class="form-note">Phần xác nhận đang xem thử: thông tin chỉ lưu trên thiết bị, chưa gửi đến cô dâu chú rể.</p><p class="form-feedback" id="form-feedback" role="status"></p></form></section>
 <section class="thankyou section" id="thanks"><p class="script">Thank you</p><p>Cảm ơn Quý Khách đã dành tình cảm cho gia đình chúng tôi! Sự hiện diện của Quý Khách chính là món quà ý nghĩa nhất. Gia đình chúng tôi vô cùng trân quý khi được cùng Quý Khách chia sẻ niềm hạnh phúc trong ngày trọng đại này.</p><p class="thankyou-names">Quang Huy <span>&</span> Ngọc Lan</p><small>29 . 11 . 2026</small></section>
-<section class="album-section section" id="album"><h2>Khoảnh khắc hạnh phúc</h2><div class="album-grid"><button class="album-main" data-photo="assets/couple.jpg" aria-label="Phóng to ảnh ngày chung đôi"><img src="assets/couple.jpg" alt="Ảnh minh họa cặp đôi trong lễ cưới" loading="lazy"></button><button data-photo="assets/celebration.jpg" aria-label="Phóng to ảnh bó hoa cưới"><img src="assets/celebration.jpg" alt="Bó hoa cưới trong nắng chiều" loading="lazy"></button><button data-photo="assets/portrait.jpg" aria-label="Phóng to ảnh không gian tiệc"><img src="assets/portrait.jpg" alt="Không gian lễ cưới trong vườn" loading="lazy"></button></div><p class="photo-note">Ảnh minh họa · sẽ thay bằng ảnh cưới của Quang Huy & Ngọc Lan</p><button class="text-button" id="reopen">Xem lại phong bì ♡</button></section>
+<section class="album-section section" id="album"><h2>Khoảnh khắc hạnh phúc</h2><div class="album-grid"><button class="album-main" data-photo="assets/couple.jpg" aria-label="Phóng to ảnh ngày chung đôi"><img src="assets/couple.jpg" alt="Ảnh minh họa cặp đôi trong lễ cưới" loading="lazy"></button><button data-photo="assets/celebration.jpg?v=e636768b669e" aria-label="Phóng to ảnh bó hoa cưới"><img src="assets/celebration.jpg?v=e636768b669e" alt="Bó hoa cưới trong nắng chiều" loading="lazy"></button><button data-photo="assets/portrait.jpg" aria-label="Phóng to ảnh không gian tiệc"><img src="assets/portrait.jpg" alt="Không gian lễ cưới trong vườn" loading="lazy"></button></div><p class="photo-note">Ảnh minh họa · sẽ thay bằng ảnh cưới của Quang Huy & Ngọc Lan</p><button class="text-button" id="reopen">Xem lại phong bì ♡</button></section>
 </div></main>
 <nav class="bottom-nav" aria-label="Điều hướng thiệp" hidden><a href="#home" aria-label="Về đầu thiệp">H <i>&</i> L</a><a href="#event">Tiệc cưới</a><a href="#map">Bản đồ</a><a href="#rsvp">Xác nhận</a></nav>
 <audio id="wedding-song" src="assets/em-dong-y-i-do.mp3" loop preload="none"></audio>
-<button id="music-button" aria-controls="wedding-song" title="Em Đồng Ý (I Do)" class="music-button" aria-label="Bật nhạc nền" aria-pressed="false" hidden>♫</button>
+<div class="music-player" id="music-player" hidden>
+  <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <button id="music-button" type="button" aria-controls="wedding-song" title="Em Đồng Ý (I Do)" class="music-button" aria-label="Phát nhạc nền" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r=".9" fill="currentColor" stroke="none"/><path d="M12 5.2a6.8 6.8 0 0 1 6.8 6.8" opacity=".8"/><path d="M12 7.6a4.4 4.4 0 0 1 4.4 4.4" opacity=".6"/><path d="M12 18.8A6.8 6.8 0 0 1 5.2 12" opacity=".8"/><path d="M12 16.4A4.4 4.4 0 0 1 7.6 12" opacity=".6"/></svg>
+  </button>
+</div>
 <dialog id="photo-dialog" class="photo-dialog"><button class="dialog-close" data-close aria-label="Đóng ảnh">×</button><img id="full-photo" src="assets/couple.jpg" alt="Ảnh cưới minh họa được phóng to"></dialog>
 </body></html>

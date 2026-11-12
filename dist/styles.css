@@ -16,80 +16,41 @@
 .map-section{padding:54px 30px 40px}.map-section h2{font:36px/1.4 var(--display);margin:12px 0}.map-section>p:not(.eyebrow){font:16px/1.6 var(--serif)}.map-flower{position:absolute;top:15px;left:-20px;width:65px;opacity:.85;pointer-events:none}.qr-link{display:block;margin:27px auto 22px;width:232px;background:white;border:1px solid #c3ad92;padding:10px;box-shadow:0 7px 20px #5020200b}.qr-link img{width:100%;height:auto;image-rendering:pixelated}.map-section>.button{font-size:13px;min-height:44px}.map-embed{display:block;margin-top:22px;width:100%;height:250px;border:1px solid #bc9f83;border-radius:4px;background:#ede3d1}
 .rsvp-section{margin:0 20px;padding:33px 26px 37px;border:1px solid #ab8b7f;border-radius:25px;background:#fcf8f05c}.rsvp-section>.script{font-size:35px;margin-bottom:12px;color:#9c6e63}.rsvp-section h2{font:600 29px var(--serif);margin-bottom:13px}.rsvp-section>p:not(.script){font:15px/1.7 var(--serif)}.rsvp-section form{text-align:left;margin-top:26px}form>label,#count-field>label,fieldset legend{font-size:13px;display:block;margin-bottom:7px}input:not([type]),select,textarea{display:block;width:100%;border:1px solid #c5b5a1;background:#fffdf8;color:var(--ink);border-radius:5px;padding:11px 12px;font-size:14px;min-height:45px}input:focus,textarea:focus,select:focus{outline:1px solid var(--red);outline-offset:2px}input::placeholder,textarea::placeholder{color:#a08a7b;font-size:12px}fieldset{border:0;padding:0;margin:22px 0}fieldset legend{margin-bottom:10px}.radio-option{display:flex;align-items:center;gap:9px;font:14px/1.4 var(--serif);margin:11px 0}.radio-option input{accent-color:var(--red);width:15px;height:15px;margin:0;flex-shrink:0}#count-field{margin-bottom:20px}textarea{resize:vertical;min-height:90px}form .button{width:100%;margin-top:19px}.form-note{text-align:center;font-size:10px;line-height:1.65;color:var(--muted);margin:14px 0 0}.form-feedback{font-size:12px;line-height:1.7;margin-top:15px;text-align:center}.form-feedback:empty{display:none}
 .thankyou{padding:50px 37px 48px;background:url('assets/castle.webp') center bottom/100% auto no-repeat}.thankyou>.script{font-size:76px;line-height:1.2;margin-bottom:20px}.thankyou>p:not(.script,.thankyou-names){font:17px/1.7 var(--serif)}.thankyou-names{font:clamp(32px,9cqw,43px)/1.5 var(--script);margin-top:25px}.thankyou-names>span{font:italic .6em var(--body);color:#a28b79}.thankyou small{display:block;font:14px var(--serif);letter-spacing:3px;margin-top:11px}.album-section{padding:0 20px 120px}.album-section h2{font:27px var(--display);margin:15px 0 23px}.album-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.album-grid button{padding:0;background:none;border:0;overflow:hidden;height:230px}.album-grid .album-main{grid-column:span 2;height:280px}.album-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.album-grid button:hover img{transform:scale(1.04)}.photo-note{font-size:10px;color:var(--muted);line-height:1.7;margin:14px 0 25px}
-.bottom-nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:min(460px,calc(100% - 24px));z-index:9;background:#f8f0e5f2;backdrop-filter:blur(12px);border:1px solid #c2a28e;border-radius:24px;box-shadow:0 4px 15px #36151a15;display:flex;align-items:center;justify-content:space-between;padding:9px 20px}.bottom-nav[hidden],.music-button[hidden]{display:none}.bottom-nav a{font-size:12px}.bottom-nav a:first-child{font:22px var(--display)}.bottom-nav i{font:24px var(--script);color:#a18b7c}.bottom-nav a:last-child{background:var(--red);padding:6px 13px;color:#fff0e3;font-size:12px;border-radius:20px}.music-button{position:fixed;right:max(15px,calc((100% - 500px)/2 + 15px));bottom:87px;width:38px;height:38px;z-index:8;border:1px solid #b8967e;background:#fbf4e8;color:var(--red);border-radius:50%;font-size:22px;box-shadow:0 2px 10px #4b101b20}.music-button[aria-pressed=true]{background:var(--red);color:var(--paper)}dialog{position:fixed;border:0;background:#230710;padding:0;max-width:850px;width:calc(100% - 28px);box-shadow:0 20px 100px #20060a66;overflow:visible}dialog::backdrop{background:#2b0712c9;backdrop-filter:blur(4px)}.dialog-close{position:absolute;top:10px;right:10px;border:0;background:var(--paper);color:var(--ink);font-size:29px;width:36px;height:36px;border-radius:50%;line-height:1}.photo-dialog img{max-height:85vh;object-fit:contain;margin:auto}.section.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}.section.reveal.visible{opacity:1;transform:translateY(0)}
+.bottom-nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:min(460px,calc(100% - 24px));z-index:9;background:#f8f0e5f2;backdrop-filter:blur(12px);border:1px solid #c2a28e;border-radius:24px;box-shadow:0 4px 15px #36151a15;display:flex;align-items:center;justify-content:space-between;padding:9px 20px}.bottom-nav[hidden],.music-player[hidden]{display:none}.bottom-nav a{font-size:12px}.bottom-nav a:first-child{font:22px var(--display)}.bottom-nav i{font:24px var(--script);color:#a18b7c}.bottom-nav a:last-child{background:var(--red);padding:6px 13px;color:#fff0e3;font-size:12px;border-radius:20px}dialog{position:fixed;border:0;background:#230710;padding:0;max-width:850px;width:calc(100% - 28px);box-shadow:0 20px 100px #20060a66;overflow:visible}dialog::backdrop{background:#2b0712c9;backdrop-filter:blur(4px)}.dialog-close{position:absolute;top:10px;right:10px;border:0;background:var(--paper);color:var(--ink);font-size:29px;width:36px;height:36px;border-radius:50%;line-height:1}.photo-dialog img{max-height:85vh;object-fit:contain;margin:auto}.section.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}.section.reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:520px){body{background:var(--paper)}.cover{padding:38px 18px}.opening-card{width:315px;min-height:455px;padding:79px 24px 33px;border-radius:5px}.opening-card h1{font-size:40px}.heart-seal{width:51px;height:51px;top:18px;font-size:28px}.heart-thread{width:180px;height:140px}.thread-top{left:-15px}.cover-date{font-size:14px}.invited{font-size:14px;margin-top:23px}.guest{font-size:15px}.letter-note{font-size:13px;line-height:1.6;margin:13px 0}.open-button{margin-top:5px;min-height:38px;font-size:14px}.hero{padding-top:30px;min-height:760px}.save-heading{font-size:25px}.envelope-scene{max-width:84%}.hero-names{margin-top:48px}.hero-date{font-size:16px;margin-top:25px}.wine-panel{margin-inline:15px;padding:30px 20px 34px;border-radius:27px}.wine-panel h2{font-size:24px}.families{gap:7px;margin-bottom:30px}.family-label{font-size:16px}.families p:not(.family-label){font-size:15px}.announcement{font-size:14px}.ceremony-label{font-size:15px}.ceremony-venue{font-size:22px}.event-date{gap:10px}.event-date>span{width:82px;font-size:14px}.event-date>strong{font-size:59px;padding-inline:11px}.lunar-date{font-size:13px}.photo-interlude{height:400px;margin:30px 15px 33px}.invitation-copy{font-size:14px}.invitation-copy>span{font-size:19px}.countdown{gap:14px}.countdown strong{font-size:30px}.countdown span{font-size:12px}.calendar{padding-inline:10px}.venue-label{font-size:14px}.reception-section h3{font-size:26px}.honor{font-size:16px}.map-section{padding:48px 25px 33px}.map-section h2{font-size:31px}.map-section .eyebrow{font-size:9px}.map-section>p:not(.eyebrow){font-size:14px}.map-flower{width:52px;left:-16px;top:7px}.map-embed{height:230px}.rsvp-section{margin-inline:15px;padding-inline:23px}.rsvp-section>.script{font-size:32px}.rsvp-section h2{font-size:27px}.thankyou{padding:45px 30px}.thankyou>.script{font-size:67px}.thankyou>p:not(.script,.thankyou-names){font-size:16px}.album-section{padding-inline:15px}.album-section h2{font-size:25px}.album-grid .album-main{height:240px}.album-grid button{height:190px}.bottom-nav{padding-inline:15px}.bottom-nav a{font-size:11px}.bottom-nav a:last-child{font-size:11px}}
 @media(max-width:360px){.hero{min-height:710px}.families p:not(.family-label){font-size:13px}.event-date>span{width:70px;font-size:13px}.event-date>strong{font-size:54px}.wine-panel{padding-inline:16px}.countdown{gap:11px}.rsvp-section{padding-inline:18px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.section.reveal{opacity:1;transform:none}}
+
+/* Share the parents' rows even when a name wraps on a narrow screen. */
+@supports (grid-template-rows: subgrid) {
+  .families > div {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    row-gap: 0;
+    align-items: start;
+  }
+  .families .mother { grid-row: 3; margin-top: 0; }
+}
 /* Keep the architectural drawings as faint paper decoration, as in the reference. */
 .hero::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/castle.webp') center bottom/100% auto no-repeat;opacity:.17}
 .thankyou{background-image:linear-gradient(#f4efdfb8,#f4efdfb8),url('assets/castle.webp');background-size:100% 100%,100% auto;background-position:center,center bottom}
 
-/* A narrow shower on either side leaves the centre of the invitation clear. */
-.petal-shower {
+#wedding-effects {
   position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 21;
-  inset-block: 0;
-  inset-inline: 0;
-  width: min(100%, 710px);
-  margin-inline: auto;
-  overflow: hidden;
+  pointer-events: none;
+}
+.touch-heart {
+  position: fixed;
+  z-index: 22;
   pointer-events: none;
   user-select: none;
-  contain: strict;
-}
-.petal {
-  position: absolute;
-  top: -30px;
-  /* Reserve the middle 232px for the QR, plus room for the petal to turn. */
-  --edge: clamp(0px, calc(50% - 144px - var(--size)), var(--lane));
-  width: var(--size);
-  height: calc(var(--size) * 1.18);
-  animation: petal-fall var(--fall) linear var(--delay) infinite;
-}
-.petal:nth-child(odd) { left: var(--edge); }
-.petal:nth-child(even) { right: var(--edge); }
-.petal::before {
-  content: '';
-  display: block;
-  height: 100%;
-  animation: petal-turn var(--turn) ease-in-out var(--delay) infinite alternate;
-}
-.petal.rose::before {
-  border-radius: 65% 40% 72% 24% / 42% 46% 82% 58%;
-  background:
-    radial-gradient(ellipse at 76% 11%, #ffe2d99c 0%, transparent 43%),
-    radial-gradient(ellipse at 12% 80%, #9e233f 4%, transparent 57%),
-    linear-gradient(135deg, #f8b8b0 4%, #db7181 46%, #af3854 78%, #861e39);
-  box-shadow: inset 1px 0 2px #fff0dc80;
-}
-.petal.peach::before {
-  border-radius: 58% 54% 82% 24% / 46% 40% 85% 57%;
-  background:
-    radial-gradient(ellipse at 30% 18%, #fff1e1 6%, transparent 57%),
-    linear-gradient(124deg, #fbd9cf 18%, #f2acb7 64%, #bf6883);
-  /* The small cleft at the tip distinguishes the peach blossom petal. */
-  -webkit-mask-image: radial-gradient(ellipse 13% 20% at 54% -5%, transparent 77%, black 100%);
-  mask-image: radial-gradient(ellipse 13% 20% at 54% -5%, transparent 77%, black 100%);
-}
-@keyframes petal-fall {
-  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
-  9%   { opacity: .86; }
-  31%  { transform: translate3d(var(--drift), 32vh, 0); }
-  64%  { transform: translate3d(0, 66vh, 0); }
-  90%  { opacity: .7; }
-  100% { transform: translate3d(var(--drift), calc(100vh + 45px), 0); opacity: 0; }
-}
-@keyframes petal-turn {
-  0%   { transform: rotate(-38deg) scaleX(.82); }
-  38%  { transform: rotate(6deg) scaleX(1); }
-  72%  { transform: rotate(51deg) scaleX(.45); }
-  100% { transform: rotate(94deg) scaleX(.8); }
-}
-@media (max-width: 520px) {
-  .petal:nth-child(n+9) { display: none; }
+  line-height: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
   .cover:not(.opening) .heart-thread path {
     stroke-dasharray: 1;
     animation: trace-thread 1.8s ease-out backwards;
@@ -111,7 +72,7 @@
   .photo-interlude.visible img { animation: settle-portrait 1.7s ease-out both; }
   .thin-rule.visible { animation: extend-rule .95s ease-out both; }
   .wedding-day.visible { animation: date-halo 1.45s ease-out 2; }
-}
+
 @keyframes trace-thread { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes lift-seal {
   to { transform: translate(-50%, -14px) rotate(-11deg) scale(1.08); opacity: 0; }
@@ -134,7 +95,4 @@
 @keyframes date-halo {
   from { box-shadow: 0 0 0 0 #f9dbb49c; }
   to { box-shadow: 0 0 0 9px #f9dbb400; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .petal-shower { display: none; }
 }
