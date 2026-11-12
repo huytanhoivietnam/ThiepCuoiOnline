@@ -1,0 +1,140 @@
+@font-face{font-family:'Great Vibes';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/GreatVibes-Regular.ttf') format('truetype')}
+:root{--digits:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--wine:#4b171b;--red:#771d25;--paper:#f4efdf;--ink:#4b1b1e;--muted:#9a7b70;--serif:'Cormorant Garamond',serif;--display:'Viaoda Libre',serif;--body:'Lora',serif;--script:'Great Vibes',cursive}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;color:var(--ink);font:15px/1.7 var(--body);background:#faf9f7;min-height:100vh}body.closed{overflow:hidden}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}button{cursor:pointer;color:inherit}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid #bd855b;outline-offset:5px}button:disabled{cursor:default}p,h1,h2,h3{margin:0}h1,h2,h3{font-weight:400}img{display:block;max-width:100%}.amp{font-family:var(--script);font-weight:400}.script{font:52px/1.3 var(--script)}.ornament{display:flex;align-items:center;justify-content:center;gap:10px;color:#aa7c72;line-height:1;margin:18px 0;font-size:13px}.ornament span{width:33px;height:1px;background:linear-gradient(90deg,transparent,#9a665f)}.ornament span:last-child{transform:rotate(180deg)}.button{display:inline-flex;gap:15px;align-items:center;justify-content:center;min-height:44px;padding:9px 24px;border:0;border-radius:25px;background:#7e1722;color:#fff3e8;font:15px/1.5 var(--body);box-shadow:0 4px 9px #4b111b20;transition:background .2s,transform .2s}.button:hover{background:#571119;transform:translateY(-1px)}.text-button{display:inline-flex;align-items:center;gap:10px;background:none;border:0;border-bottom:1px solid currentColor;padding:4px 0;font-size:13px}.text-button:hover{opacity:.7}.eyebrow{font-size:11px;letter-spacing:1.4px}
+.cover{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;background:linear-gradient(130deg,#7b171b 0,#5a1217 55%,#390d10 100%);overflow:auto;padding:50px 20px;transition:opacity .8s,visibility .8s}.opening-card{position:relative;isolation:isolate;overflow:hidden;width:600px;min-height:445px;text-align:center;background:#f8eded;border-radius:7px;padding:90px 35px 33px;box-shadow:0 20px 35px #16030466;border:1px solid #e5d3ca;transition:transform .7s,opacity .7s}.opening-card h1{font:46px/1.22 var(--script);position:relative}.opening-card .amp{display:block;font:19px/1.4 var(--serif)}.heart-seal{position:absolute;top:20px;left:50%;transform:translateX(-50%);height:61px;width:61px;border-radius:50%;background:radial-gradient(circle at 35% 24%,#a2494d,#7a1927 64%,#661625);border:3px double #b56b70;box-shadow:0 3px 13px #75343f60;display:grid;place-items:center;color:white;font:34px Georgia,serif}.heart-thread{position:absolute;width:245px;height:170px;fill:none;stroke:#a16d70;stroke-width:.9;z-index:-1}.thread-top{top:-10px;left:-13px}.thread-bottom{bottom:-18px;right:-10px;transform:rotate(180deg)}.cover-date{font-size:16px;margin-top:7px}.invited{font-size:16px;margin-top:19px}.guest{font-size:17px;font-weight:500;padding:2px 14px;background:#ead6d7;display:table;margin:7px auto;border-radius:10px}.letter-note{font-size:15px;line-height:1.5;margin:10px auto;max-width:350px}.open-button{margin-top:6px;min-height:40px;padding:6px 30px}.cover.opening .opening-card{transform:translateY(-40px);opacity:0}.cover.opened{opacity:0;visibility:hidden;pointer-events:none}
+.paper{container-type:inline-size;max-width:500px;margin:0 auto;overflow:hidden;background:var(--paper) url('assets/paper-texture.png') repeat;box-shadow:0 0 30px #49331b09}.hero{text-align:center;position:relative;padding:38px 20px 30px;isolation:isolate;min-height:850px}.save-heading{font:28px/1.4 var(--display);letter-spacing:1.5px;margin-bottom:23px}.envelope-scene{position:relative;width:340px;max-width:85%;aspect-ratio:480/554;margin:0 auto}.envelope-back{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0}.envelope-photo{position:absolute;z-index:1;right:10%;top:3%;width:65%;height:72%;padding:6px;background:#fff;transform:rotate(9deg);box-shadow:0 4px 10px #33161c22}.envelope-photo img{width:100%;height:100%;object-fit:cover;object-position:55% center}.envelope-flowers{position:absolute;z-index:2;top:3%;left:-8%;width:31%;height:70%;object-fit:contain}.envelope-front{position:absolute;z-index:3;bottom:0;width:100%;height:auto;left:0}.hero-names{font:clamp(53px,15cqw,73px)/1.18 var(--script);margin-top:58px;position:relative;z-index:1}.hero-names .amp{display:block;font:italic 25px/1 var(--body);color:#94785e;margin:4px 0 8px}.hero-date{font:19px var(--body);letter-spacing:3px;margin-top:28px}.scroll-hint{display:block;font-size:25px;margin-top:16px;color:#a28774}.section{text-align:center;position:relative}.wine-panel{position:relative;z-index:1;margin:0 20px;background:var(--wine);color:#efe7d5;border-radius:30px;padding:35px 23px 38px}.wine-panel h2{font:600 27px/1.25 var(--serif);margin:0 0 25px}.families{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:28px 0 37px}.families::after{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;background:#c4ae9366}.families>div{display:flex;flex-direction:column;align-items:center}.families .mother{margin-top:auto}.family-label{font:18px var(--serif);margin:0 0 12px;color:#c7b7a0}.families p:not(.family-label){font:17px/1.7 var(--serif)}.families strong{font-weight:500}.announcement{font:16px/1.7 var(--serif);letter-spacing:.1px}.full-names{margin:30px -10px 28px}.full-names p{font:clamp(26px,8.7cqw,43px)/1.4 var(--script)}.full-names>span{display:block;font:italic 23px/1 var(--body);color:#d5c2aa;margin:6px 0}.thin-rule{width:60px;height:1px;background:#c5aa8580;margin:29px auto}.ceremony-label{font:17px/1.5 var(--serif);max-width:290px;margin:0 auto 13px}.ceremony-venue{font:24px/1.3 var(--serif);margin-bottom:8px}.address{font:clamp(12px,4cqw,15px)/1.7 var(--serif);white-space:nowrap}
+.event-time{display:grid;justify-items:center;gap:4px;margin:27px auto 16px}
+.event-time>span{font:500 12px/1.5 var(--body);text-transform:uppercase;letter-spacing:.15em;color:#e0ccbb}
+.event-time time{font:600 clamp(34px,9cqw,44px)/1.15 var(--digits);font-variant-numeric:lining-nums tabular-nums;letter-spacing:.015em;color:#fff8ec}
+.event-date{display:flex;align-items:center;justify-content:center;gap:18px;margin:8px 0 13px}.event-date>span{font:16px/1.6 var(--serif);width:92px}.event-date>strong{font:70px/1.2 var(--display);padding:0 15px;border-inline:1px solid #d8c3a575}.lunar-date{font:italic 15px/1.6 var(--serif)}.photo-interlude{position:relative;margin:38px 20px 42px;padding:0;overflow:hidden;border-radius:30px 30px 0 0;height:480px}.photo-interlude img{width:100%;height:100%;object-fit:cover;object-position:55%}.photo-interlude>span{position:absolute;bottom:10px;right:12px;color:#fff9ef;font:10px var(--body);text-shadow:0 1px 5px #000}.reception-section{padding-top:35px;padding-bottom:37px}.reception-section h2{margin-bottom:24px}.invitation-copy{font:16px/1.7 var(--serif)}.invitation-copy>span{display:block;font-size:20px;font-style:italic;margin:5px 0 -12px}.reception-section .event-time{margin-top:25px}.countdown{display:flex;align-items:flex-start;justify-content:center;gap:15px;margin:27px 0 29px}.countdown strong{font:400 29px/1.3 var(--digits);font-variant-numeric:lining-nums tabular-nums}.countdown span{display:block;font:13px var(--serif)}.countdown i{font-style:normal;font-size:22px;padding-top:3px;color:#cab49c}.calendar{padding:20px 15px 17px;border:1px solid #c8b29888;border-radius:90px 90px 0 0;margin:0 2px}
+.calendar-title{font:600 16px/1.5 var(--digits);font-variant-numeric:lining-nums tabular-nums;letter-spacing:.06em;margin:14px 0 15px;color:#fff4e6}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px 0;font:500 16px/1 var(--digits);font-variant-numeric:lining-nums tabular-nums;color:#fff4e6}
+.calendar-grid>span{min-height:33px;display:grid;place-items:center}
+.calendar-grid .weekday{font-size:12px;font-weight:600;color:#e4cdbc}
+.calendar-grid .wedding-day{justify-self:center;align-self:center;width:33px;height:33px;background:#f6e3ca;border-radius:50%;font-weight:700;color:#4b171b}
+.venue-label{font:16px var(--serif);margin-bottom:15px}.reception-section h3{font:30px/1.4 var(--display);margin-bottom:11px}.honor{font:italic 17px/1.6 var(--serif);margin-top:25px}
+.map-section{padding:54px 30px 40px}.map-section h2{font:36px/1.4 var(--display);margin:12px 0}.map-section>p:not(.eyebrow){font:16px/1.6 var(--serif)}.map-flower{position:absolute;top:15px;left:-20px;width:65px;opacity:.85;pointer-events:none}.qr-link{display:block;margin:27px auto 22px;width:232px;background:white;border:1px solid #c3ad92;padding:10px;box-shadow:0 7px 20px #5020200b}.qr-link img{width:100%;height:auto;image-rendering:pixelated}.map-section>.button{font-size:13px;min-height:44px}.map-embed{display:block;margin-top:22px;width:100%;height:250px;border:1px solid #bc9f83;border-radius:4px;background:#ede3d1}
+.rsvp-section{margin:0 20px;padding:33px 26px 37px;border:1px solid #ab8b7f;border-radius:25px;background:#fcf8f05c}.rsvp-section>.script{font-size:35px;margin-bottom:12px;color:#9c6e63}.rsvp-section h2{font:600 29px var(--serif);margin-bottom:13px}.rsvp-section>p:not(.script){font:15px/1.7 var(--serif)}.rsvp-section form{text-align:left;margin-top:26px}form>label,#count-field>label,fieldset legend{font-size:13px;display:block;margin-bottom:7px}input:not([type]),select,textarea{display:block;width:100%;border:1px solid #c5b5a1;background:#fffdf8;color:var(--ink);border-radius:5px;padding:11px 12px;font-size:14px;min-height:45px}input:focus,textarea:focus,select:focus{outline:1px solid var(--red);outline-offset:2px}input::placeholder,textarea::placeholder{color:#a08a7b;font-size:12px}fieldset{border:0;padding:0;margin:22px 0}fieldset legend{margin-bottom:10px}.radio-option{display:flex;align-items:center;gap:9px;font:14px/1.4 var(--serif);margin:11px 0}.radio-option input{accent-color:var(--red);width:15px;height:15px;margin:0;flex-shrink:0}#count-field{margin-bottom:20px}textarea{resize:vertical;min-height:90px}form .button{width:100%;margin-top:19px}.form-note{text-align:center;font-size:10px;line-height:1.65;color:var(--muted);margin:14px 0 0}.form-feedback{font-size:12px;line-height:1.7;margin-top:15px;text-align:center}.form-feedback:empty{display:none}
+.thankyou{padding:50px 37px 48px;background:url('assets/castle.webp') center bottom/100% auto no-repeat}.thankyou>.script{font-size:76px;line-height:1.2;margin-bottom:20px}.thankyou>p:not(.script,.thankyou-names){font:17px/1.7 var(--serif)}.thankyou-names{font:clamp(32px,9cqw,43px)/1.5 var(--script);margin-top:25px}.thankyou-names>span{font:italic .6em var(--body);color:#a28b79}.thankyou small{display:block;font:14px var(--serif);letter-spacing:3px;margin-top:11px}.album-section{padding:0 20px 120px}.album-section h2{font:27px var(--display);margin:15px 0 23px}.album-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.album-grid button{padding:0;background:none;border:0;overflow:hidden;height:230px}.album-grid .album-main{grid-column:span 2;height:280px}.album-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.album-grid button:hover img{transform:scale(1.04)}.photo-note{font-size:10px;color:var(--muted);line-height:1.7;margin:14px 0 25px}
+.bottom-nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:min(460px,calc(100% - 24px));z-index:9;background:#f8f0e5f2;backdrop-filter:blur(12px);border:1px solid #c2a28e;border-radius:24px;box-shadow:0 4px 15px #36151a15;display:flex;align-items:center;justify-content:space-between;padding:9px 20px}.bottom-nav[hidden],.music-button[hidden]{display:none}.bottom-nav a{font-size:12px}.bottom-nav a:first-child{font:22px var(--display)}.bottom-nav i{font:24px var(--script);color:#a18b7c}.bottom-nav a:last-child{background:var(--red);padding:6px 13px;color:#fff0e3;font-size:12px;border-radius:20px}.music-button{position:fixed;right:max(15px,calc((100% - 500px)/2 + 15px));bottom:87px;width:38px;height:38px;z-index:8;border:1px solid #b8967e;background:#fbf4e8;color:var(--red);border-radius:50%;font-size:22px;box-shadow:0 2px 10px #4b101b20}.music-button[aria-pressed=true]{background:var(--red);color:var(--paper)}dialog{position:fixed;border:0;background:#230710;padding:0;max-width:850px;width:calc(100% - 28px);box-shadow:0 20px 100px #20060a66;overflow:visible}dialog::backdrop{background:#2b0712c9;backdrop-filter:blur(4px)}.dialog-close{position:absolute;top:10px;right:10px;border:0;background:var(--paper);color:var(--ink);font-size:29px;width:36px;height:36px;border-radius:50%;line-height:1}.photo-dialog img{max-height:85vh;object-fit:contain;margin:auto}.section.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s}.section.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:520px){body{background:var(--paper)}.cover{padding:38px 18px}.opening-card{width:315px;min-height:455px;padding:79px 24px 33px;border-radius:5px}.opening-card h1{font-size:40px}.heart-seal{width:51px;height:51px;top:18px;font-size:28px}.heart-thread{width:180px;height:140px}.thread-top{left:-15px}.cover-date{font-size:14px}.invited{font-size:14px;margin-top:23px}.guest{font-size:15px}.letter-note{font-size:13px;line-height:1.6;margin:13px 0}.open-button{margin-top:5px;min-height:38px;font-size:14px}.hero{padding-top:30px;min-height:760px}.save-heading{font-size:25px}.envelope-scene{max-width:84%}.hero-names{margin-top:48px}.hero-date{font-size:16px;margin-top:25px}.wine-panel{margin-inline:15px;padding:30px 20px 34px;border-radius:27px}.wine-panel h2{font-size:24px}.families{gap:7px;margin-bottom:30px}.family-label{font-size:16px}.families p:not(.family-label){font-size:15px}.announcement{font-size:14px}.ceremony-label{font-size:15px}.ceremony-venue{font-size:22px}.event-date{gap:10px}.event-date>span{width:82px;font-size:14px}.event-date>strong{font-size:59px;padding-inline:11px}.lunar-date{font-size:13px}.photo-interlude{height:400px;margin:30px 15px 33px}.invitation-copy{font-size:14px}.invitation-copy>span{font-size:19px}.countdown{gap:14px}.countdown strong{font-size:30px}.countdown span{font-size:12px}.calendar{padding-inline:10px}.venue-label{font-size:14px}.reception-section h3{font-size:26px}.honor{font-size:16px}.map-section{padding:48px 25px 33px}.map-section h2{font-size:31px}.map-section .eyebrow{font-size:9px}.map-section>p:not(.eyebrow){font-size:14px}.map-flower{width:52px;left:-16px;top:7px}.map-embed{height:230px}.rsvp-section{margin-inline:15px;padding-inline:23px}.rsvp-section>.script{font-size:32px}.rsvp-section h2{font-size:27px}.thankyou{padding:45px 30px}.thankyou>.script{font-size:67px}.thankyou>p:not(.script,.thankyou-names){font-size:16px}.album-section{padding-inline:15px}.album-section h2{font-size:25px}.album-grid .album-main{height:240px}.album-grid button{height:190px}.bottom-nav{padding-inline:15px}.bottom-nav a{font-size:11px}.bottom-nav a:last-child{font-size:11px}}
+@media(max-width:360px){.hero{min-height:710px}.families p:not(.family-label){font-size:13px}.event-date>span{width:70px;font-size:13px}.event-date>strong{font-size:54px}.wine-panel{padding-inline:16px}.countdown{gap:11px}.rsvp-section{padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.section.reveal{opacity:1;transform:none}}
+/* Keep the architectural drawings as faint paper decoration, as in the reference. */
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/castle.webp') center bottom/100% auto no-repeat;opacity:.17}
+.thankyou{background-image:linear-gradient(#f4efdfb8,#f4efdfb8),url('assets/castle.webp');background-size:100% 100%,100% auto;background-position:center,center bottom}
+
+/* A narrow shower on either side leaves the centre of the invitation clear. */
+.petal-shower {
+  position: fixed;
+  z-index: 21;
+  inset-block: 0;
+  inset-inline: 0;
+  width: min(100%, 710px);
+  margin-inline: auto;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  contain: strict;
+}
+.petal {
+  position: absolute;
+  top: -30px;
+  /* Reserve the middle 232px for the QR, plus room for the petal to turn. */
+  --edge: clamp(0px, calc(50% - 144px - var(--size)), var(--lane));
+  width: var(--size);
+  height: calc(var(--size) * 1.18);
+  animation: petal-fall var(--fall) linear var(--delay) infinite;
+}
+.petal:nth-child(odd) { left: var(--edge); }
+.petal:nth-child(even) { right: var(--edge); }
+.petal::before {
+  content: '';
+  display: block;
+  height: 100%;
+  animation: petal-turn var(--turn) ease-in-out var(--delay) infinite alternate;
+}
+.petal.rose::before {
+  border-radius: 65% 40% 72% 24% / 42% 46% 82% 58%;
+  background:
+    radial-gradient(ellipse at 76% 11%, #ffe2d99c 0%, transparent 43%),
+    radial-gradient(ellipse at 12% 80%, #9e233f 4%, transparent 57%),
+    linear-gradient(135deg, #f8b8b0 4%, #db7181 46%, #af3854 78%, #861e39);
+  box-shadow: inset 1px 0 2px #fff0dc80;
+}
+.petal.peach::before {
+  border-radius: 58% 54% 82% 24% / 46% 40% 85% 57%;
+  background:
+    radial-gradient(ellipse at 30% 18%, #fff1e1 6%, transparent 57%),
+    linear-gradient(124deg, #fbd9cf 18%, #f2acb7 64%, #bf6883);
+  /* The small cleft at the tip distinguishes the peach blossom petal. */
+  -webkit-mask-image: radial-gradient(ellipse 13% 20% at 54% -5%, transparent 77%, black 100%);
+  mask-image: radial-gradient(ellipse 13% 20% at 54% -5%, transparent 77%, black 100%);
+}
+@keyframes petal-fall {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+  9%   { opacity: .86; }
+  31%  { transform: translate3d(var(--drift), 32vh, 0); }
+  64%  { transform: translate3d(0, 66vh, 0); }
+  90%  { opacity: .7; }
+  100% { transform: translate3d(var(--drift), calc(100vh + 45px), 0); opacity: 0; }
+}
+@keyframes petal-turn {
+  0%   { transform: rotate(-38deg) scaleX(.82); }
+  38%  { transform: rotate(6deg) scaleX(1); }
+  72%  { transform: rotate(51deg) scaleX(.45); }
+  100% { transform: rotate(94deg) scaleX(.8); }
+}
+@media (max-width: 520px) {
+  .petal:nth-child(n+9) { display: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cover:not(.opening) .heart-thread path {
+    stroke-dasharray: 1;
+    animation: trace-thread 1.8s ease-out backwards;
+  }
+  .cover:not(.opening) .thread-bottom path { animation-delay: .22s; }
+  .cover.opening .opening-card {
+    transform: perspective(900px) translateY(-37px) rotateX(9deg) scale(.96);
+    transform-origin: center 80%;
+  }
+  .cover.opening .heart-seal { animation: lift-seal .55s ease-in both; }
+  body:not(.closed) .envelope-photo { animation: lift-photo 1.45s cubic-bezier(.2,.76,.22,1) both; }
+  body:not(.closed) .envelope-flowers {
+    transform-origin: 68% 90%;
+    animation: settle-bouquet 1.75s ease-out both;
+  }
+  body:not(.closed) .hero-names { animation: reveal-lettering 1.15s .18s ease-out backwards; }
+  .full-names.visible p { animation: reveal-lettering .95s ease-out backwards; }
+  .full-names.visible p:last-child { animation-delay: .16s; }
+  .photo-interlude.visible img { animation: settle-portrait 1.7s ease-out both; }
+  .thin-rule.visible { animation: extend-rule .95s ease-out both; }
+  .wedding-day.visible { animation: date-halo 1.45s ease-out 2; }
+}
+@keyframes trace-thread { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes lift-seal {
+  to { transform: translate(-50%, -14px) rotate(-11deg) scale(1.08); opacity: 0; }
+}
+@keyframes lift-photo {
+  from { transform: translate(-3%, 22%) rotate(3deg); }
+  to { transform: translate(0, 0) rotate(9deg); }
+}
+@keyframes settle-bouquet {
+  from { transform: rotate(-9deg); }
+  65% { transform: rotate(2deg); }
+  to { transform: rotate(0); }
+}
+@keyframes reveal-lettering {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes settle-portrait { from { transform: scale(1.075); } to { transform: scale(1); } }
+@keyframes extend-rule { from { transform: scaleX(.15); } to { transform: scaleX(1); } }
+@keyframes date-halo {
+  from { box-shadow: 0 0 0 0 #f9dbb49c; }
+  to { box-shadow: 0 0 0 9px #f9dbb400; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .petal-shower { display: none; }
+}
